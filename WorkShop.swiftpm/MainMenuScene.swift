@@ -18,7 +18,7 @@ class MainMenuScene: SKScene {
     
     lazy var playbutton: ButtonNode = {
         let button = ButtonNode(defaultTexture: "PlayButtonDefault", pressedTexture: "PlayButtonPressed"){ [self] in
-            view?.presentScene(MovementAnimationScene.newScene())
+            view?.presentScene(ChangingTextureScene.newScene())
         }
         
         button.position = CGPoint(x: size.width/2, y: 160)
