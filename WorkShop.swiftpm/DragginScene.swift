@@ -32,9 +32,11 @@ class DragginScene: SKScene {
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         for touch in touches {
             touchLocation = touch.location(in: self)
-
-            player.position.x = (touchLocation.x)
-            player.position.y = (touchLocation.y)
+            
+            if player.contains(touchLocation){
+                player.position.x = (touchLocation.x)
+                player.position.y = (touchLocation.y)
+            }
         }
     }
 }
